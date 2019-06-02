@@ -19,7 +19,7 @@ def admin():
        return redirect(url_for('setup'))
     return render_template('blog/admin.html')
 
-@app.route('/setup', methods=["GET", "POST"])
+@app.route('/setup', methods=("GET", "POST"))
 def setup():
     form = SetupForm()
     if form.validate_on_submit():
